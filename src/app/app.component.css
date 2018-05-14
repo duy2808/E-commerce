@@ -1,0 +1,52 @@
+.info-customer, .info-login {
+    
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.loginbox {
+    margin-top: 5px;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    height: 60px;
+    }
+
+.nav-home {
+    background-color: #3498db;
+}
+
+/* FOOTER*/
+footer {
+    width: 100%;
+    background-color: black;
+    padding: 3%;
+    color: #FFF;
+    margin-top: 15px;
+}
+.footericon {
+    padding: 20px;
+    font-size: 30px;
+    color: #FFF;
+}
+
+.footericon:hover {
+    color: cyan;
+}
+.input-Email::after {
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\f0a9";
+    position: absolute;
+    font-size: 22px;
+    color: #555e60;
+    
+    right: 25px;
+    padding-top: 7px;
+
+}
+.form-for-footer {
+    margin-top: 7px;
+}
