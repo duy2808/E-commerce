@@ -1,0 +1,63 @@
+.uk-container-small{
+    margin: auto auto;
+}
+a {
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+    
+    
+}
+a:hover {
+    text-decoration: none;
+}
+
+.button {
+    
+    
+    border: none;
+  
+    text-align: center;
+   
+    
+   
+    transition: all 0.5s;
+    cursor: pointer;
+    
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  @media all and (max-width: 400px){
+    .uk-grid-match>*>:not([class*=uk-width]) {
+      box-sizing: border-box;
+      width: 58%;
+      flex: 50%;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+   }

@@ -1,0 +1,51 @@
+<!-- My-container -->
+<div class="My-container" *ngIf="books">
+  <div class="container "  >
+    <div class="row flg-sale-product">
+      <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 first-image frst " *ngFor='let book of books'>
+          <div class="tag">
+              <span class="hot-sale"> Hot Sale</span>
+              <span class="Flagship-exclusive">Flagship Exclusive</span>
+            </div>
+      <p class="text-center "><a routerLink="/detail/{{book._id}}" ><img src="{{book.images.main}}" alt="" class="img-fluid imgforfenty"></a></p>
+      <div class="quickview-title">Quick View</div>
+      <a ><p class = "text-center"> {{book.title}} </p></a> 
+        <p class = "text-center priceforsalebook"> $19 <button class="btn btn-success buttonaddtocart">Add To Cart</button></p> 
+        
+        </div>
+
+         <!-- My-containerproduct-view -->
+  <!-- <div class="product-view">
+      <div class="close-btn">X</div>
+      <div class="product-big-img">
+        <img src="{{book.images.main}}" alt=" ">
+      </div>
+      <div class="product-big-desc">
+        <h2> FENTY BEAUTY </h2>
+        <H5> Product code : 3316889</H5>
+        <h5> Brand: Fenty Beauty </h5>
+        <h6><a href="#">1 review</a>  <a href="#">View all review</a></h6>
+      <div class="price">
+        <h4 class="oldprice"><del>$39</del><sup>25% OFF</sup></h4>
+        <h4 class="newprice"> $29 <abbr title="">Free Shipping All Order From $60</abbr></h4>
+      </div>
+      <button class="buybutton btn btn-success">Add to cart</button>
+      </div>
+</div>-->
+
+       
+      
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 first-image sale-now-on   ">
+            
+            <p class="alertFlag" >LIMITED-TIME OFFER</p>
+            <h4 >THE NATURE IS ALWAYS THE BEST</h4>
+            <h3 class ="quote-fenty" >NOW</h3>
+            <p class="zeroPricing"> $<span class="salePrice">29.90</span> <span class="origPrice">$39.90</span> <span class="timeFrame">UNTIL 5/3</span></p>
+          </div>
+     
+  
+      </div>
+    </div> 
+    </div>
+  
+    <hr>

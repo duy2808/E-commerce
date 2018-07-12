@@ -1,0 +1,33 @@
+@media all and (max-width: 400px){
+    .free-shipping{
+        font-size: 9px;
+    }
+}
+.progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background: #f4511e;
+    transition: width .6s ease;
+}
+.genre-name a{
+    color: black;
+}
+.genre-name a:hover{
+    color: #f4511e;
+    text-decoration: none;
+
+    
+}
+
+@media all and (max-width: 400px){
+    .genre-name a{
+        color: #ccc;
+    }
+}

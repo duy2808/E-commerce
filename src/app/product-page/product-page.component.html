@@ -1,0 +1,79 @@
+<!-- product container -->
+
+<div class="uk-container uk-container-small uk-align-center  " >
+  <div class="row control-page ">
+    <div class="col-md-6">
+        
+  <!-- filter -->
+    
+        <label class="controluk-flex-left uk-margin-medium-top search" uk-margin>
+            <input type="text" class="input" placeholder="Seach for Book " [(ngModel)]="filter">
+        </label>
+    </div>
+      <div class="col-md-6 ">
+    <!-- pagination -->
+    <ul class="uk-pagination uk-flex-right uk-margin-medium-top pagination" uk-margin>
+        <div class="column pag">
+            <label class="control">  Item per page
+                <input type="number" class="input" min="0" [(ngModel)]="config.itemsPerPage">
+            </label>
+        </div>
+    </ul>
+  </div>
+</div>
+    
+          
+      
+
+
+    <!-- end/pagination -->
+      <hr>
+  <div class="row"> 
+    <div class="col-6 col-sm-6 col-md-3   uk-text-center product  "*ngFor='let book of books | stringFilter: filter | paginate: config' >
+        <app-loading-spi *ngIf = "showSpinner"></app-loading-spi>
+        <div class="uk-card  uk-card-default uk-card-hover  " >
+           
+            <div class="uk-card-media-top product-image text-center">
+               <a routerLink="/detail/{{book._id}}"><img src="{{book.images.main}}" alt=""> </a> 
+                <div class="savings-splat">12%<br>off</div>
+            </div>
+            <div class="uk-card-body product-info text-center">
+                <p class="uk-card-title uk-align-center title-book"><a routerLink="/detail/{{book._id}}">{{book.title}}</a> </p>
+                <p class="old-prices">
+                    <span class="prices">
+                       {{book.previousPrice}}d
+                    </span>
+                  </p>
+                  <p class="special-prices">
+                    <span class="prices">
+                       {{book.sellingPrice}}d
+                    </span>
+                  </p>
+                  <span>
+                    
+                        <button class="button"><span>Add </span></button>
+                    
+                  </span>
+                  
+            </div>
+            
+        </div>
+      
+    </div>
+    </div>
+    <hr>
+    <!-- pagination -->
+    <ul class="uk-pagination uk-flex-right uk-margin-medium-top" uk-margin>
+        <pagination-controls [id]="config.id"
+                         
+                         [directionLinks]="directionLinks"
+                         [autoHide]="autoHide"
+                         [previousLabel]="labels.previousLabel"
+                         [nextLabel]="labels.nextLabel"
+                         [screenReaderPaginationLabel]="labels.screenReaderPaginationLabel"
+                         [screenReaderPageLabel]="labels.screenReaderPageLabel"
+                         [screenReaderCurrentLabel]="labels.screenReaderCurrentLabel"
+                         (pageChange)="onPageChange($event)"></pagination-controls>
+    </ul>
+    <!-- end/pagination -->
+</div>

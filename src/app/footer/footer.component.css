@@ -1,0 +1,18 @@
+.uk-align-right{
+    margin-top: -40px;
+    margin-right: 20px;
+}
+
+@media all and (max-width: 400px){
+    .find-us{
+        display: none;
+
+    }
+    .col-md-4 {
+        margin-left: 35px;
+    }
+    .uk-align-right{
+        margin-top: -25px;
+        margin-right: 20px;
+    }
+}

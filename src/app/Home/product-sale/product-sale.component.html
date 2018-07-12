@@ -1,0 +1,43 @@
+<!-- product sale -->
+<div class="container">
+  <div class="row">
+
+  
+<div class="body-product container">
+ <section class="product" *ngIf="books"> 
+   <div class="product-cart" *ngFor='let book of books'>
+     <div class="tag">
+       <span>Sale</span>
+       <span class="online-exclusive">Online Exclusive</span>
+     </div>
+    
+     <div class="product-image">
+       <a routerLink="/detail/{{book._id}}"><img src="{{book.images.main}}" alt=""></a>
+       <div class="overlay"><a class="btn btn-success buttonaddtocart">Add to card</a></div>
+     </div>
+     <div class="product-info text-center">
+       <h5><a href="#">{{book.title}} </a></h5>
+       <p class="old-prices">
+         <span class="prices">
+            {{book.previousPrice}}d
+         </span>
+       </p>
+       <p class="special-prices">
+         <span class="prices">
+            {{book.sellingPrice}}d
+         </span>
+       </p>
+       </div>
+   </div>
+   
+ </section>
+
+
+
+ 
+</div>
+</div>
+</div>
+<hr>
+
+

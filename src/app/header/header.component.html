@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+ 
+    <!-- My javascript file -->
+   
+    
+  </head>
+
+<body>
+        <div class="header">
+               
+                <div class="progress-container">
+                  <div class="progress-bar" id="myBar"></div>
+                </div>  
+              </div>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top ">
+       
+        <!-- Brand -->
+        <a routerLink="/Home" class="navbar-brand" >Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <!-- Links -->
+        <ul class="navbar-nav">
+           <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a routerLink="/listbook"  class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown">
+              Menu
+            </a>
+            <div class="dropdown-menu mega-menu">
+                <div class="container">
+              <div class="row">
+                    <div class="col-md-3 " *ngFor='let genre of genres'>
+                            
+                            <p class="genre-name"><a routerLink="/product-page">{{genre.name}}</a></p>
+                            
+                        </div>
+                   
+              </div>
+            </div>
+            </div>
+          </li>
+          
+              <li class="nav-item shopping-cart">
+                <a class="nav-link" href="#">Shopping Cart</a>
+              </li>
+              <li class="nav-item">
+                    <a routerLink="/login" class="nav-link" >Login</a>
+                  </li>
+        </ul>
+    </div>
+      </nav>
+
+      <!-- free-shipping-container-->
+    <div class="container free-shipping-container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <span class="free-shipping "> FREE SHIPPING FOR ALL ORDER ABOVE $60</span>
+            </div>
+        </div>
+    </div> 

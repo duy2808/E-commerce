@@ -1,0 +1,182 @@
+<!--  nav-tab -->
+
+
+<ul class="nav nav-tabs justify-content-center" role="tablist">
+    <li role="presentation" class=" nav-item">
+      <a href="#Best08"
+      aria-controls="table1"
+      role="tab"
+      data-toggle="tab"
+      class="nav-link active"
+      >Bestselling Crime and Thriller</a>
+    </li>
+    <li role="presentation" class="nav-item">
+     <a href="#Best09"
+      aria-controls="table2"
+      role="tab"
+      data-toggle="tab"
+      class="nav-link "
+      >Bestselling Art and Photography books</a>
+    </li>
+    
+    <li role="presentation" class="nav-item">
+      <a href="#Best10"
+       aria-controls="table3"
+      role="tab"
+      data-toggle="tab"
+      class="nav-link "
+      >New Releases and in the news</a>
+    </li>
+  </ul>
+
+
+
+
+
+  <div class="tab-content">
+
+  <!-- slider 1 -->
+
+<div uk-slider="center: true, " class="uk-container-small tab-pane active" id="Best08" role="tabpanel"  >
+        <app-loading-spi *ngIf = "showSpinner"></app-loading-spi>
+    <div class="uk-position-relative uk-visible-toggle uk-light">
+
+        <ul class="uk-slider-items  uk-child-width-1-3@s uk-child-width-1-4@m uk-grid" >
+            <li  class="slide-product uk-box-shadow-small" *ngFor='let book of books'>
+                <div class="uk-card uk-card-default uk-card-hover">
+                    <div class="uk-card-media-top product-image text-center">
+                        <a routerLink="/detail/{{book._id}}"><img src="{{book.images.main}}" alt="" ></a>
+                        <div class="savings-splat">12%<br>off</div>
+                    </div>
+                    <div class="uk-card-body product-info text-center">
+                        <p class="uk-card-title uk-align-center"><marquee  behavior="scroll" direction="left" scrollamount="3"><a routerLink="/detail/{{book._id}}">{{book.title}}</a> </marquee></p>
+                        <p class="old-prices">
+                            <span class="prices">
+                               {{book.previousPrice}}d
+                            </span>
+                          </p>
+                          <p class="special-prices">
+                            <span class="prices">
+                               {{book.sellingPrice}}d
+                            </span>
+                          </p>
+                          <p>
+                            
+                                <button class="button"><span>Add </span></button>
+                            
+                          </p>
+                          
+                    </div>
+                    
+                </div>
+            </li>
+            
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+
+</div>
+
+
+<!-- slider 2 -->
+<div uk-slider="center: true, " class="uk-container-small tab-pane " id="Best09" role="tabpanel">
+    
+    <div class="uk-position-relative uk-visible-toggle uk-light">
+
+        <ul class="uk-slider-items  uk-child-width-1-3@s uk-child-width-1-4@m uk-grid" >
+            <li  class="slide-product uk-box-shadow-small" *ngFor='let book of books'>
+                <div class="uk-card uk-card-default uk-card-hover">
+                    <div class="uk-card-media-top product-image text-center">
+                        <img src="{{book.images.main}}" alt="">
+                        
+                    </div>
+                    <div class="uk-card-body product-info text-center">
+                        <p class="uk-card-title uk-align-center"><marquee  behavior="scroll" direction="left" scrollamount="3"><a href="">{{book.title}}</a> </marquee></p>
+                        <p class="old-prices">
+                            <span class="prices">
+                               {{book.previousPrice}}d
+                            </span>
+                          </p>
+                          <p class="special-prices">
+                            <span class="prices">
+                               {{book.sellingPrice}}d
+                            </span>
+                          </p>
+                          <p>
+                            
+                                <button class="button"><span>Add </span></button>
+                            
+                          </p>
+                          
+                    </div>
+                    
+                </div>
+            </li>
+            
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+
+</div>
+
+
+
+<!-- slider 3 -->
+<div uk-slider="center: true, " class="uk-container-small tab-pane " id="Best10" role="tabpanel">
+    
+    <div class="uk-position-relative uk-visible-toggle uk-light">
+
+        <ul class="uk-slider-items  uk-child-width-1-3@s uk-child-width-1-4@m uk-grid" >
+            <li  class="slide-product uk-box-shadow-small" *ngFor='let book of books'>
+                <div class="uk-card uk-card-default uk-card-hover">
+                    <div class="uk-card-media-top product-image text-center">
+                        <img src="{{book.images.main}}" alt="">
+                        
+                    </div>
+                    <div class="uk-card-body product-info text-center">
+                        <p class="uk-card-title uk-align-center"><marquee  behavior="scroll" direction="left" scrollamount="3"><a href="">{{book.title}}</a> </marquee></p>
+                        <p class="old-prices">
+                            <span class="prices">
+                               {{book.previousPrice}}d
+                            </span>
+                          </p>
+                          <p class="special-prices">
+                            <span class="prices">
+                               {{book.sellingPrice}}d
+                            </span>
+                          </p>
+                          <p>
+                            
+                                <button class="button"><span>Add </span></button>
+                            
+                          </p>
+                          
+                    </div>
+                    
+                </div>
+            </li>
+            
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+
+</div>
+</div>

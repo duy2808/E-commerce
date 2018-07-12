@@ -1,0 +1,14 @@
+<p style="color: red;">ListByGenreComponent hoat dong</p>
+<div *ngIf="genres">
+    <div class="mb-2">
+            <input type="text" [(ngModel)]="name">
+            <button (click)="addGenre()">Add</button>
+            <button (click)="getGenres()">Get List of Genres</button>
+    </div>
+    <br>
+    <ul>
+        <li *ngFor="let genre of genres" class="mb-2">
+            <button class="btn btn-sm" (click)="deleteGenre(genresUrl/genre._id)">Delete</button>
+            {{genre.name}}</li>
+    </ul>
+</div>
