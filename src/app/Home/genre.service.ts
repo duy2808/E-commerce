@@ -11,7 +11,7 @@ const httpOptions = {
 @Injectable()
 export class GenreService {
 
-  private genresUrl = "http://green-web-bookstore.herokuapp.com/api/genres";
+  private genresUrl = "http://green-web-bookshop.herokuapp.com/api/genres";
   constructor(
     private http: HttpClient,
   ) { }

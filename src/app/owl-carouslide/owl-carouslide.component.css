@@ -44,7 +44,7 @@
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 10pt;
+  font-size: 12pt;
   
   
   transition: all 0.5s;
@@ -100,15 +100,3 @@
   position: relative;
 }
 
-.savings-splat:before {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-style: solid;
-  border-width: 6rem 6rem 0 0;
-  border-color: #ff0072 transparent transparent transparent;
-  z-index: -1;
-}

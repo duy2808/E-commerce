@@ -41,11 +41,13 @@
   
    
     <div class="uk-position-relative uk-visible-toggle uk-light">
-
+            <app-loading-spi *ngIf = "showSpinner"></app-loading-spi>
         <ul class="uk-slider-items  uk-child-width-1-3@s uk-child-width-1-4@m uk-grid" >
-                <app-loading-spi *ngIf = "showSpinner"></app-loading-spi>
+                
             <li  class="slide-product uk-box-shadow-small" *ngFor='let book of books'>
                 <div class="uk-card uk-card-default uk-card-hover">
+                        
+                    
                     <div class="uk-card-media-top product-image text-center">
                        <a routerLink="/detail/{{book._id}}"> <img src="{{book.images.main}}" alt=""> </a>
                         <div class="savings-splat">12%<br>off</div>

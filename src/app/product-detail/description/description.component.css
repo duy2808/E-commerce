@@ -24,11 +24,11 @@
     padding: 20px 0 20px 0; 
     
     /* "transparent" only works here because == rgba(0,0,0,0) */ 
-    background-image: -moz-linear-gradient(top, transparent, #f4511e);
-        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #f4511e));
+    background-image: linear-gradient(to bottom, white, Gainsboro);
+        background-image: linear-gradient(to bottom, white, Gainsboro);
 }
 .read-more .button {
-    color: azure;
+    color: #f4511e;
     text-decoration: none;
 }
 
