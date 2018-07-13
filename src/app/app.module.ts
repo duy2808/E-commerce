@@ -8,7 +8,7 @@ import { ProductSaleComponent } from './Home/product-sale/product-sale.component
 import { Post } from './Home/post';
 import { BookService } from './Home/book.service';
 import { Book } from './Home/book';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS  }    from '@angular/common/http';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CarouslideTwoComponent } from './Home/carouslide-two/carouslide-two.component';
 import { FooterComponent } from './footer/footer.component';
@@ -19,7 +19,7 @@ import { Banner} from './Home/banner';
 import { BannerService } from './Home/banner.service';
 import { OwlCarouslideComponent } from './owl-carouslide/owl-carouslide.component';
 import { ListBookComponentComponent } from './list-book-component/list-book-component.component';
-import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './/app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './Home/homepage/homepage.component';
@@ -41,6 +41,14 @@ import { LoadingPageModule } from 'angular-loading-page';         //Loading dire
 import { MaterialBarModule } from 'angular-loading-page';
 import { LoadingSpiComponent } from './ui/loading-spi/loading-spi.component'; 
 import {StringFilterPipe} from './string-filter.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// login
+import { AuthGuard } from './auth/auth.guard';
+import { AuthService } from './auth/auth.service';
+import { JwtInterceptor } from './_helpers';
+
+import { UserService } from './services/user.service';
+
 
 @NgModule({
   declarations: [
@@ -70,18 +78,33 @@ import {StringFilterPipe} from './string-filter.pipe';
     LoadingSpiComponent,
     StringFilterPipe,
     
+    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    
+    ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
     OwlModule,
     NgxPaginationModule
     
   ],
-  providers: [BookService,GenreService,BannerService],
+  providers: [BookService,
+    GenreService,
+    BannerService,
+    AuthGuard,
+    AuthService,
+    UserService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+    },
+    // provider used to create fake backend
+   
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

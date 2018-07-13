@@ -7,6 +7,7 @@ import { LoginpageComponent } from './login/loginpage/loginpage.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductPageComponent } from "./product-page/product-page.component";
+import { AuthGuard } from './auth/auth.guard';
 const routes: Routes = [
   
   { 
@@ -23,7 +24,7 @@ const routes: Routes = [
   },
   { 
     path: 'login', 
-    component: LoginpageComponent 
+    component: LoginpageComponent ,
   },
   { 
     path: 'signup', 

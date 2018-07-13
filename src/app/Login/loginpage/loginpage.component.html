@@ -1,24 +1,65 @@
-
-<div class="modal-dialog text-center">
-    <div class="col-sm-8 main-section">
-        <div class="modal-content">
-          <div class="col-12 user-img">
-              <img src="../../../assets/images/avatar.png" alt="avatar">
+<div class="container-fluid">
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 col-lg-5">
+            <div class="card p-4">
+              <div class="card-body">
+                <h3> Sign In </h3>
+               
+                <br>
+                <form [formGroup]="loginAdminForm" (ngSubmit)="onSubmit()">
+      
+                  <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Email is required</div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fas fa-user"></i>
+                      </span>
+                    </div>
+                    <input formControlName="username" required type="text" class="form-control text-truncate" placeholder="Email" autofocus>
+                  </div>
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                  </div>
+                  <div class="input-group position-relative mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fas fa-unlock"></i>
+                      </span>
+                    </div>
+                    <input formControlName="password" required [type]="show" class="form-control text-truncate" placeholder="Password">
+                    <div class="input-group-prepend bg-none border-0">
+                      <span class="input-group-text">
+                        <button (click)="onToggle()" type="button"  class="myText-link myIcon-inside text-muted"><i *ngIf="!value" class="far fa-eye"></i><i *ngIf="value" class="far fa-eye-slash"></i></button>
+                      </span>
+                    </div>
+                    
+                  </div>
+                 
+                  <div class="row">
+                    <div class="col-6">
+                      <button [disabled]="loading" type="submit" class="btn btn-add px-4">Login</button>
+                      <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+                      />
+                    </div>
+                    <div class="col-6 text-right">
+                      <button type="button" class="btn text-danger px-0">Forgot password?</button>
+                    </div>
+                    <div class="col-12 mt-3">
+                      <div *ngIf="error" class="text-danger"><i class="icon-close"></i> Email or Password is incorrect</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <form action="" class="col-12">
-              <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Enter Username">
-              </div>
-              <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Enter Password">
-              </div>
-              <button type="submit" class="btn buttonlogin">Login</button>
-          </form>
-
-          <div class="col-12 ">
-              <a routerLink="/signup" class="nav-link" >register</a>
+        </div>
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="mb-0 name">a.dtran28.08.96@gmail.com</p>
+            <p class="mb-0 name">8980501</p>
           </div>
           
-        </div> <!-- End off Modal Content-->
+        </div>
       </div>
-</div>

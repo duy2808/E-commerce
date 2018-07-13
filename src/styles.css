@@ -612,28 +612,7 @@ html,  {
     border-radius: 5px;
     padding-left: 54px;
 }
-.form-group::before {
-    font-family: 'Font Awesome\ 5 Free';
-    content: "\f00e";
-    position: absolute;
-    font-size: 22px;
-    color: #555e60;
-    left: 28px;
-    padding-top: 4px;
 
-}
-.form-group:last-of-type::before{
-    content: "\f023";
-}
-.form-group:nth-of-type(3)::before{
-    content: "\f2b6";
-}
-.form-group:nth-of-type(4)::before{
-    content: "\f041";
-}
-.form-group:nth-of-type(2)::before{
-    content: "\f3cd";
-}
 
 .buttonlogin {
     width: 40%;

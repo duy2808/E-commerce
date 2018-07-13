@@ -8,7 +8,7 @@
           </div>
           <div class="col-md-6">
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 text-des">
                 <h1>{{book.title}}</h1>
               </div>
              </div>
@@ -19,7 +19,7 @@
                 </div>
               </div><!-- end row -->
               <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-12 text-des">
                    <div class="description" [innerHTML]="book.shortDescription">
                         
                    </div>
@@ -39,7 +39,7 @@
               </div><!-- end row -->
               <div class="row">
                   <div class="col-md-12 bottom-rule">
-                   <h2 class="product-price">{{book.sellingPrice}}d</h2>
+                   <h2 class="product-price text-dan">{{book.sellingPrice}}d</h2>
                   </div>
                  </div><!-- end row -->
                  <hr>
@@ -63,7 +63,7 @@
                  
                  <div class="row">
                   <div class="col-md-4 ">
-                   <span class="monospaced">In Stock</span>
+                   <span class="monospaced text-des">In Stock</span>
                   </div>
                   
                  </div><!-- end row -->
@@ -103,7 +103,7 @@
               <!-- Tab panes -->
               <div class="tab-content sidebar-box ">
                   
-                  <div role="tabpanel" class="tab-pane active " id="description">
+                  <div role="tabpanel" class="tab-pane active text-des" id="description">
                       <div class="top-10" [innerHTML]="book.fullDescription">
                             
                       </div>

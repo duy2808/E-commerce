@@ -41,3 +41,12 @@
 .btn-price:hover {
     background-color: #FF4500
 }
+.text-dan{
+    color: Red;
+}
+.text-des{
+    color: DimGray;
+}
+.badge-primary {
+    background-color: #f4511e;
+}
